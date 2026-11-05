@@ -1,45 +1,60 @@
 # 💰 Expense Hub – Personal Expense Management System
 
-**Expense Hub** is a full-stack web application designed to simplify personal financial management. It helps users track their income, expenses, budgets, categories, and transactions in one place.
+**Expense Hub** is a full-stack personal finance management application built to help users manage their income, expenses, budgets, categories, parties, and transactions in one place.
 
-Built with modern web technologies, Expense Hub provides an organized and user-friendly experience for managing daily finances.
+It provides a simple and organized platform where users can track their financial activities, manage their budgets, and monitor their overall financial situation.
 
 ---
 
 ## 🚀 Features
 
-- 🔐 **User Authentication** – Secure user registration and login.
-- 📊 **Dashboard** – Get an overview of your financial activities.
-- 💵 **Income Management** – Track and manage your income.
-- 💸 **Expense Management** – Add, update, view, and delete expenses.
-- 📁 **Category Management** – Organize transactions into different categories.
-- 🎯 **Budget Management** – Create and manage budgets.
-- 👥 **Party Management** – Manage party-related financial records.
-- 📜 **Transaction History** – Keep track of financial transactions.
-- 📱 **Responsive UI** – User-friendly interface across different devices.
+- 🔐 **User Authentication** – Secure user registration, login, logout, and password management using JWT and cookie-based authentication.
+- 📊 **Dashboard** – View an overview of financial activities.
+- 💵 **Income Management** – Manage and track income transactions.
+- 💸 **Expense Management** – Add, view, update, and delete expense transactions.
+- 📁 **Category Management** – Organize income, expenses, and investments into categories.
+- 👥 **Party Management** – Manage different parties such as customers, suppliers, banks, companies, and individuals.
+- 🎯 **Budget Management** – Create, update, and manage personal budgets.
+- 📜 **Transaction History** – Maintain and manage financial transaction records.
+- 👤 **Profile Management** – View user account information.
+- 🔒 **Protected Routes** – Restrict access to authenticated users.
+- ⚡ **Redux State Management** – Manage application data and authentication state.
+- 📱 **Responsive UI** – User-friendly interface for different screen sizes.
+- 🗂️ **Default Data Initialization** – Automatically create default categories and party records when a new user registers.
 
 ---
 
 ## 🛠️ Tech Stack
 
 ### Frontend
+
 - React.js
-- JavaScript
-- Tailwind CSS
+- TypeScript
+- Vite
+- React Bootstrap
+- Bootstrap
+- React Router DOM
+- Redux Toolkit
+- Axios
+- Formik
+- Yup
+- React Icons
+- React Toastify
 - HTML5
 - CSS3
-- React Router
-- Fetch API
 
 ### Backend
+
 - Node.js
 - Express.js
 - MongoDB
 - Mongoose
 - JSON Web Token (JWT)
 - Cookie-based Authentication
+- bcrypt
 
 ### Development Tools
+
 - Visual Studio Code
 - Git & GitHub
 - Postman
@@ -60,6 +75,7 @@ Expense-Hub/
 │   │   ├── routes/
 │   │   ├── middlewares/
 │   │   ├── utils/
+│   │   ├── constants/
 │   │   └── index.js
 │   │
 │   ├── public/
@@ -69,13 +85,16 @@ Expense-Hub/
 │
 ├── Frontend/
 │   ├── src/
+│   │   ├── app/
 │   │   ├── components/
-│   │   ├── pages/
 │   │   ├── features/
+│   │   ├── pages/
+│   │   ├── services/
 │   │   ├── hooks/
-│   │   └── App.jsx
+│   │   └── main.tsx
 │   │
 │   ├── public/
+│   ├── .env
 │   ├── package.json
 │   └── .gitignore
 │
@@ -101,7 +120,7 @@ git clone YOUR_GITHUB_REPOSITORY_URL
 cd Expense-Hub
 ```
 
-### 3. Setup Backend
+### 3. Backend Setup
 
 ```bash
 cd Backend
@@ -111,26 +130,39 @@ npm install
 Create a `.env` file inside the Backend folder.
 
 ```env
-PORT=8000
+PORT=3000
 MONGODB_URI=your_mongodb_connection_string
+
 CORS_ORIGIN=http://localhost:5173
+
 ACCESS_TOKEN_SECRET=your_access_token_secret
 REFRESH_TOKEN_SECRET=your_refresh_token_secret
 ```
 
-Run the backend:
+Start the backend development server:
 
 ```bash
 npm run dev
 ```
 
-### 4. Setup Frontend
+### 4. Frontend Setup
 
 Open another terminal:
 
 ```bash
 cd Frontend
 npm install
+```
+
+Create a `.env` file inside the Frontend folder.
+
+```env
+VITE_API_URL=http://localhost:3000
+```
+
+Start the frontend development server:
+
+```bash
 npm run dev
 ```
 
@@ -145,56 +177,9 @@ http://localhost:5173
 ## 🔒 Security
 
 - JWT-based authentication.
-- Protected routes and user access control.
-- Environment variables for sensitive credentials.
-- Secure password handling.
-- Cookie-based token management.
-
----
-
-## 📸 Screenshots
-
-Add your project screenshots here.
-
-| Dashboard | Transactions |
-|---|---|
-| Add Dashboard Screenshot | Add Transactions Screenshot |
-
----
-
-## 🎯 Project Objectives
-
-- To simplify personal income and expense tracking.
-- To provide an organized financial management system.
-- To understand full-stack web development.
-- To implement REST APIs and database operations.
-- To gain practical experience with React, Node.js, Express.js, and MongoDB.
-
----
-
-## 🔮 Future Enhancements
-
-- Financial reports and analytics.
-- Interactive charts and graphs.
-- Monthly and yearly expense summaries.
-- Export transactions to PDF and Excel.
-- Advanced budget tracking.
-- Notifications and reminders.
-
----
-
-## 👨‍💻 Developer
-
-**Developed by:** Project Developer
-
-**Project Name:** Expense Hub
-
-**Project Type:** Full-Stack Web Application
-
----
-
-## ⭐ Support
-
-If you find this project useful, consider giving it a ⭐ on GitHub.
-
-**Thanks for visiting Expense Hub!**
+- Secure password hashing.
+- HTTP cookie-based token management.
+- Protected frontend routes.
+- Backend authentication middleware.
+- User-specific data access.
+- Environment
