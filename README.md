@@ -182,4 +182,67 @@ http://localhost:5173
 - Protected frontend routes.
 - Backend authentication middleware.
 - User-specific data access.
-- Environment
+- Environment variables for sensitive credentials.
+- Secure API request handling.
+
+---
+
+## 📸 Screenshots
+
+Add your actual project screenshots below.
+
+| Dashboard | Transactions |
+|:---:|:---:|
+| Add Dashboard Screenshot | Add Transactions Screenshot |
+
+| Categories | Budget Management |
+|:---:|:---:|
+| Add Categories Screenshot | Add Budget Screenshot |
+
+| Party Management | Authentication |
+|:---:|:---:|
+| Add Party Screenshot | Add Login Screenshot |
+
+---
+
+## 🎯 Project Objectives
+
+- To simplify personal income and expense management.
+- To provide an organized financial tracking system.
+- To manage budgets and financial categories efficiently.
+- To implement secure user authentication.
+- To develop RESTful APIs using Node.js and Express.js.
+- To understand frontend and backend integration.
+- To gain practical experience with the MERN stack and TypeScript.
+
+---
+
+## 🔮 Future Enhancements
+
+- 📈 Interactive financial charts and analytics.
+- 📅 Monthly and yearly expense summaries.
+- 📄 Export transactions to PDF and Excel.
+- 🔔 Notifications and budget reminders.
+- 📊 Advanced financial reports.
+- 💹 Improved investment tracking.
+- 📱 Enhanced mobile experience.
+
+---
+
+## 👨‍💻 Developer 
+
+**Project Name:** Expense Hub
+
+**Project Type:** Full-Stack Web Application
+
+**Technology:** MERN Stack + TypeScript
+
+**Developed by:** Tarun Gohil
+
+---
+
+## ⭐ Support
+
+If you find this project useful, consider giving it a ⭐ on GitHub.
+
+**Thanks for visiting Expense Hub!** 💚
